@@ -1,11 +1,10 @@
-# History files
+.Rproj.user
 .Rhistory
+.RData
+eff.pdf
+*.xls
+*.RProj
+*.key
+*.xlsx
+Palestra.key
 
-# Example code in package build process
-*-Ex.R
-
-# R data files from past sessions
-.Rdata
-
-# RStudio files
-.Rproj.user/
