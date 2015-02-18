@@ -1,7 +1,7 @@
 # Curso Posgraduação Frugivoria 2015, UNESP Rio Claro, Brazil
 
 This is the `curso_pos_frug_2015` repo with material for the post-graduate course, 2015.
-![cartaz](images/Cartaz_Frugivoria2015.jpg)  
+![cartaz](./images/Cartaz_Frugivoria2015.jpg)  
 
 
 ----------------
