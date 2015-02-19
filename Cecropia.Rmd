@@ -112,42 +112,30 @@ plot(mod)
 
 #### Quantitative component of effectiveness. Isolines.
 
-NOT-Log scaled axes. Data for Cecropia glaziouvi.   
+##### Example with `effectiveness` function
 
+You can source the code for the `effectiveness` function directly with:
 
-```{r effectiveness, echo=T, message= FALSE, warning=FALSE, fig.height=6, fig.width=10}
-# Effectiveness.
+```{r sourcing, echo=TRUE, eval=TRUE, fig.height= 6,fig.width=8, warning=FALSE, message=FALSE}
+require(downloader)
+#
+# Sourcing the effectiveness function code from GitHub.
+link = "https://raw.githubusercontent.com/pedroj/effectiveness/master/effectiveness.R"
+file = "effectiveness.R"
+if(!file.exists(file)) download(link, file, mode = "wb")
+source(file)
 
+# Extract the variables to be used
 cgla <- focal[,3:9]
-str(cgla)
-plot(cgla$totvis,cgla$totbic,xlab="Visit rate",
-     ylab="No. fruits/visit", main="Quantitative component",ylim=c(0,25),type="n")
-#, col = terrain.colors(4:8)[qc$plant]
-#text(vis, frv, plant, cex=0.6, pos=4, col="red")
-points(cgla$totvis,cgla$totbic,
-       pch=c(1,2,4,6,7,8,9,11,12,13,14,16,19,3,5)[cgla$fam])
-legend("topright", inset=.05, title="Family",
-c("Cebidae","Coerebidae","Cracidae","Fringillidae","Icteridae","Indet","Momotidae","Picidae","Psittacidae","Ramphastidae","Thraupidae","Tityridae","Trogonidae","Turdidae","Vireonidae"), pch=c(1,2,4,6,7,8,9,11,12,13,14,16,19,3,5),horiz=F,ncol=1)
+head(cgla)
 
-# Isolines of QC
-# This code sets the values for the isolines.
-# Needs to be adjusted to each particular study.
-fru1<-seq(0,25,length.out=100)
-vis1<-seq(0,140,length.out=100)
-#        plot(vis1,0.5/fru1,type="n")
-        lines(vis1,0.1/fru1)
-        lines(vis1,5/fru1)
-        lines(vis1,25/fru1)
-        lines(vis1,50/fru1)
-        lines(vis1,100/fru1)
-        lines(vis1,150/fru1)
-text(80,0, "QC= 0.1", cex=0.6, pos=4, col="red")
-text(80,0.8, "QC= 1.0", cex=0.6, pos=4, col="red")
-text(80,2.0, "QC= 5.0", cex=0.6, pos=4, col="red")
-text(80,3.6, "QC= 10.0", cex=0.6, pos=4, col="red")
-text(80,7, "QC= 15.0", cex=0.6, pos=4, col="red")
-text(80,11, "QC= 20.0", cex=0.6, pos=4, col="red")
+# Run the function to get the plot. 
+effectiveness(cgla$totvis, cgla$totbic, cgla$fam, cgla$code, 10, 
+                myxlab= "No. visits/10h", 
+                myylab="Effectiveness/vis (No. pecks handled)")
+
 ```
------------
+
+
 
 
