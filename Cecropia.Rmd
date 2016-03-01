@@ -37,8 +37,10 @@ focal<-read.table("./R_Focal_Cecropia/data.txt",
 mat<-as.matrix(focal[,10:37],col.names=c("cec18","cec02","cec03","cec25","cec22","cec06","cec16","cec13","cec05","cec15","cec28","cec24","cec11","cec21","cec20","cec01","cec04","cec23","cec14","cec12","cec09","cec17","cec07","cec19","cec08","cec10","cec26","cec27"))
 
 # Frugivore individual labels.
-row.names(focal)<-c("Thr_orna","Bro_tiri","Eup_chal","Pyr_fron","Coe_flav","Cis_leve","Tur_flav","Ind_Inde","Mel_flav","Thr_cyan","For_xant","Chl_cyan","Cac_chry","Tac_coro","Tan_sele","Ort_chlo","Thr_palm","Chl_spiz","Dac_caya","Tan_cyan","Tro_viri","Tan_prec","Tit_caya","Tur_rufi","Cyc_guja","Eup_cyan","Tan_desm","Eup_viol","Tro_surr","Dac_nigr","Pio_maxi","Abu_jacu","Bar_rufi","Hem_rufi","Sal_simi","Dac_sp.","Sel_macu","Tit_inqu","Pte_bail","Ram_dico","Bra_arac","Ceb_nigr")
-row.names(mat)<-c("Thr_orna","Bro_tiri","Eup_chal","Pyr_fron","Coe_flav","Cis_leve","Tur_flav","Ind_Inde","Mel_flav","Thr_cyan","For_xant","Chl_cyan","Cac_chry","Tac_coro","Tan_sele","Ort_chlo","Thr_palm","Chl_spiz","Dac_caya","Tan_cyan","Tro_viri","Tan_prec","Tit_caya","Tur_rufi","Cyc_guja","Eup_cyan","Tan_desm","Eup_viol","Tro_surr","Dac_nigr","Pio_maxi","Abu_jacu","Bar_rufi","Hem_rufi","Sal_simi","Dac_sp.","Sel_macu","Tit_inqu","Pte_bail","Ram_dico","Bra_arac","Ceb_nigr")
+# "Thr_orna", --- excluded.
+row.names(focal)<-c("Bro_tiri","Eup_chal","Pyr_fron","Coe_flav","Cis_leve","Tur_flav","Ind_Inde","Mel_flav","Thr_cyan","For_xant","Chl_cyan","Cac_chry","Tac_coro","Tan_sele","Ort_chlo","Thr_palm","Chl_spiz","Dac_caya","Tan_cyan","Tro_viri","Tan_prec","Tit_caya","Tur_rufi","Cyc_guja","Eup_cyan","Tan_desm","Eup_viol","Tro_surr","Dac_nigr","Pio_maxi","Abu_jacu","Bar_rufi","Hem_rufi","Sal_simi","Dac_sp.","Sel_macu","Tit_inqu","Pte_bail","Ram_dico","Bra_arac","Ceb_nigr")
+# "Thr_orna", -- excluded
+row.names(mat)<-c("Bro_tiri","Eup_chal","Pyr_fron","Coe_flav","Cis_leve","Tur_flav","Ind_Inde","Mel_flav","Thr_cyan","For_xant","Chl_cyan","Cac_chry","Tac_coro","Tan_sele","Ort_chlo","Thr_palm","Chl_spiz","Dac_caya","Tan_cyan","Tro_viri","Tan_prec","Tit_caya","Tur_rufi","Cyc_guja","Eup_cyan","Tan_desm","Eup_viol","Tro_surr","Dac_nigr","Pio_maxi","Abu_jacu","Bar_rufi","Hem_rufi","Sal_simi","Dac_sp.","Sel_macu","Tit_inqu","Pte_bail","Ram_dico","Bra_arac","Ceb_nigr")
 
 ```
 

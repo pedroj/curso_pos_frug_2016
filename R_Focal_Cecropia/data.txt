@@ -1,5 +1,6 @@
+# Thraupis ornata excluded.
 cla	ord	fam	gen	sp	code	totvis	totbic	sde	cec18	cec02	cec03	cec25	cec22	cec06	cec16	cec13	cec05	cec15	cec28	cec24	cec11	cec21	cec20	cec01	cec04	cec23	cec14	cec12	cec09	cec17	cec07	cec19	cec08	cec10	cec26	cec27
-Aves	Passeriformes	Thraupidae	Thraupis 	ornata	Thr_orna	127	2.99	380	999	1113	742	49	315	99	174	16	121	78	4	30	0	36	0	4	20	24	1	0	4	0	6	1	2	0	0	0
+# Aves	Passeriformes	Thraupidae	Thraupis 	ornata	Thr_orna	127	2.99	380	999	1113	742	49	315	99	174	16	121	78	4	30	0	36	0	4	20	24	1	0	4	0	6	1	2	0	0	0
 Aves	Psittaciformes	Psittacidae	Brotogeris	tirica	Bro_tiri	32	4.06	130	400	0	0	0	256	16	0	9	0	2	0	4	0	0	0	0	0	4	0	0	0	0	0	0	0	0	0	0
 Aves	Passeriformes	Fringillidae	Euphonia 	chalybea	Eup_chal	8	6.38	51	0	20	20	0	4	0	0	0	0	0	0	14	0	0	0	0	0	1	0	1	0	0	0	0	0	0	0	0
 Aves	Psittaciformes	Psittacidae	Pyrrhura	frontalis	Pyr_fron	34	1.29	44	120	1	4	0	0	0	1	25	0	1	0	0	18	0	0	0	0	0	0	0	0	3	0	0	0	0	0	0
