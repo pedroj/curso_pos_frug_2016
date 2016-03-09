@@ -1,5 +1,5 @@
 ---
-title: "Cecropia glaziouvii. Intervales"
+title: "Cecropia glaziovii. Intervales"
 author: "Pedro Jordano"
 date: "febrero 18, 2015"
 output: html_document
