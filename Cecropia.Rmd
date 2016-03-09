@@ -5,11 +5,11 @@ date: "febrero 18, 2015"
 output: html_document
 ---
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring ’’’HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.  
   
-##### Pedro Jordano. 25 Mar 2012.
+##### Pedro Jordano. 25 Mar 2012. Updated 8-9 Mar 2016.
 ##### Observations at _Cecropia_ focal trees in groups of two people.
 
 Initialize loading the required `R` packages.
@@ -27,7 +27,7 @@ library(ade4)
 
 ### Data. 
 Input the census table as matrix here. _Cecropia_-frugivore recorded  interactions.  
-Frugivore species are rows. Columns are _Cecropia_ individual trees.  
+Frugivore species are rows (`n= 42` but 1 species excluded and 3 species with no visits). Columns are _Cecropia_ individual trees (`n= 28`).  
 
 ```{r input_data, echo=T, message= FALSE, warning=FALSE}
 focal<-read.table("./R_Focal_Cecropia/data.txt",
@@ -49,8 +49,11 @@ row.names(mat)<-c("Bro_tiri","Eup_chal","Pyr_fron","Coe_flav","Cis_leve","Tur_fl
 Assess sampling effort and diversity accumulation as we sample additional _Cecropia_ trees.
 
 ```{r spaccum, echo=T, message= FALSE, warning=FALSE}
-# Acumulacion de especies y estimadores asintoticos
-sac <- specaccum(t(mat))
+# Species accumulation curves and asymptotic estimators
+sac <- specaccum(t(mat)) # The matrix
+specpool(t(mat))         # Asymptotic estimators
+
+# Plots
 plot(sac, ci.type = "polygon", ci.col = "yellow")
 sac2<-specaccum(t(mat),"random")
 plot(sac, ci.type="poly", col="blue", lwd=2, ci.lty=0, ci.col="lightblue")
