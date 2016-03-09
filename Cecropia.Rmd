@@ -44,6 +44,20 @@ row.names(mat)<-c("Bro_tiri","Eup_chal","Pyr_fron","Coe_flav","Cis_leve","Tur_fl
 
 ```
 
+### Species accumulation curves
+
+Assess sampling effort and diversity accumulation as we sample additional _Cecropia_ trees.
+
+```{r spaccum, echo=T, message= FALSE, warning=FALSE}
+# Acumulacion de especies y estimadores asintoticos
+sac <- specaccum(t(mat))
+plot(sac, ci.type = "polygon", ci.col = "yellow")
+sac2<-specaccum(t(mat),"random")
+plot(sac, ci.type="poly", col="blue", lwd=2, ci.lty=0, ci.col="lightblue")
+boxplot(sac2, col="yellow", add=TRUE, pch="+") # Solo para "random"
+sac2
+```
+
 ### Visualization of the invidual interaction network
 
 Assign the matrix and initialize the network.
@@ -95,7 +109,7 @@ splevel
 
 ```
 
-```{r fsd, echo=T, message= FALSE, warning=FALSE}
+```{r fsd, eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 #---------------------------------------------------------------------------
 # Taxonomic diversity index
 ## Preliminary: needs better data and some support functions
@@ -137,6 +151,14 @@ effectiveness(cgla$totvis, cgla$totbic, cgla$fam, cgla$code, 10,
                 myylab="Effectiveness/vis (No. pecks handled)")
 
 ```
+
+
+----------------------------------
+```{r}
+sessionInfo()
+```
+
+----------------------------------
 
 
 
